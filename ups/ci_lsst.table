@@ -1,0 +1,7 @@
+setupRequired(lsst_distrib)
+setupRequired(pipe_drivers -k)
+setupRequired(obs_lsst -k -r ~/LSST/obs/lsst)
+
+pathPrepend(PATH, ${PRODUCT_DIR}/bin)
+
+setEnv(OMP_NUM_THREADS, $?{OMP_NUM_THREADS-2})
