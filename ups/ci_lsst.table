@@ -2,6 +2,18 @@ setupRequired(lsst_distrib)
 setupRequired(pipe_drivers -k)
 setupRequired(obs_lsst -k -r ~/LSST/obs/lsst)
 
+# The following are necessary to run the CI script: bin/runPipeline
+setupRequired(meas_extensions_psfex)
+setupRequired(meas_modelfit)
+setupRequired(meas_extensions_photometryKron)
+setupRequired(meas_extensions_convolved)
+setupRequired(meas_extensions_shapeHSM)
+setupRequired(pipe_drivers)
+
+# The test dataset on which to run
+setupRequired(testdata_obs_lsst)
+
+
 pathPrepend(PATH, ${PRODUCT_DIR}/bin)
 
 setEnv(OMP_NUM_THREADS, $?{OMP_NUM_THREADS-2})
