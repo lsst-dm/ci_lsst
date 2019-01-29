@@ -65,8 +65,7 @@ for camera in $cameras; do
 	    if [ X"$_ids" != X ]; then
 		ids=$_ids
 	    else
-		ids="visit=204595 detectorName=S11"
-		ids="visit=204595"   # if you want all the chips, change createCalibs_CiLsst too
+		ids="visit=204595"
 	    fi
 	    ;;
 	phosim)

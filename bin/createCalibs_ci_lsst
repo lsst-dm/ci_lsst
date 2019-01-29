@@ -67,9 +67,9 @@ for camera in $cameras; do
 	    configs="isr.overscanNumLeadingColumnsToSkip=20 isr.doDark=False"
 	    ;;
 	imsim)
-	    biasIds="visit=3010000..3010009:3" #  detectorName=S11"
-	    darkIds="visit=4010000..4010009:3" # detectorName=S11"
-	    flatIds="visit=5000000..5000009:3" #  detectorName=S11"
+	    biasIds="visit=3010000..3010009:3"
+	    darkIds="visit=4010000..4010009:3"
+	    flatIds="visit=5000000..5000009:3"
 	    ;;
 	phosim)
 	    echo "\"$camera\" does not have calibration data available; skipping" >&2
