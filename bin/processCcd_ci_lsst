@@ -15,7 +15,7 @@ while [ X$1 != X ]; do
 	    cat <<EOF
 Run the isr
 Usage:
-	runIsr [options] cameras
+	runIsr_ci_lsst [options] cameras
 If no cameras, process $allCameras
 Options:
    --dir DIR  Base directory for data
@@ -66,7 +66,7 @@ for camera in $cameras; do
 		ids=$_ids
 	    else
 		ids="visit=204595 detectorName=S11"
-		ids="visit=204595"   # if you want all the chips, change createCalibs too
+		ids="visit=204595"   # if you want all the chips, change createCalibs_CiLsst too
 	    fi
 	    ;;
 	phosim)
@@ -83,7 +83,7 @@ for camera in $cameras; do
 	    ;;
     esac
 
-    echo "Running processCcd for $camera"
+    echo "Running processCcd_ci_lsst for $camera"
 
     configs="$configs calibrate.doAstrometry=False calibrate.doPhotoCal=False"
 

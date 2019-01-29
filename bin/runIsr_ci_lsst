@@ -15,7 +15,7 @@ while [ X$1 != X ]; do
 	    cat <<EOF
 Run the isr
 Usage:
-	runIsr [options] cameras
+	runIsr_ci_lsst [options] cameras
 If no cameras, process $allCameras
 Options:
    --dir DIR  Base directory for data

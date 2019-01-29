@@ -15,7 +15,7 @@ while [ X$1 != X ]; do
 	    cat <<EOF
 Create the calibration products
 Usage:
-	createCalibs [options] cameras
+	createCalibs_ci_lsst [options] cameras
 If no cameras, process $allCameras
 Options:
    -h       Print this message
