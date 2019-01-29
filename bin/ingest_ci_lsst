@@ -13,17 +13,14 @@ while [ X$1 != X ]; do
 	    PRODUCT_DIR=$1;;
 	-h)
 	    cat <<EOF
-Process the test data for the cameras from end-to-end:
-   ingestion,
-   calibration products generation,
-   ISR
+Ingest raw files for further processing.
 
 Usage:
-	runPipeline [options] --raw rawUningestedDirectory cameras
+	ingest_ci_lsst --dir outputDir --raw rawUningestedDirectory cameras
 If no cameras, process $allCameras
 Options:
    -h         Print this message
-   --dir DIR  Base directory for data
+   --dir DIR  Base directory for ingested data
    --raw DIR  Base directory for raw data
    -x, -v     Set bash option
 EOF
@@ -84,8 +81,6 @@ for camera in $cameras; do
 	rm -rf $DATA_DIR/rerun/rhl/*
     fi
     echo "lsst.obs.lsst.$camera.$mapper" > $DATA_DIR/_mapper
-    #echo "lsst.obs.lsstCam.$camera.$mapper" > $DATA_DIR/_mapper
 
-    #ingestDriver.py $DATA_DIR "$rawUningested" --mode link --cores 10
     ingestImages.py $DATA_DIR "$rawUningested" --mode link
 done

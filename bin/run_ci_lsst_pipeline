@@ -20,7 +20,7 @@ Process the test data for the cameras from end-to-end:
    ISR
 
 Usage:
-	runPipeline [options] cameras
+	run_ci_lsst_pipeline [options] cameras
 If no cameras, process $allCameras
 Options:
    --dir DIR  Base directory for outputs
@@ -60,8 +60,8 @@ if [ X"$cameras" = X"" ]; then
     cameras="$allCameras"
 fi
 
-for proc in ingest createCalibs runIsr processCcd; do
-    if [ $proc = "ingest" ]; then
+for proc in ingest_ci_lsst createCalibs_ci_lsst runIsr_ci_lsst processCcd_ci_lsst; do
+    if [ $proc = "ingest_ci_lsst" ]; then
 	$binDir/$proc --raw $rawUningestedDir --dir $PRODUCT_DIR $cameras
     else
 	$binDir/$proc --rerun $rerun --dir $PRODUCT_DIR $cameras
