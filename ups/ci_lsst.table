@@ -1,6 +1,6 @@
 setupRequired(lsst_distrib)
-setupRequired(pipe_drivers -k)
-setupRequired(obs_lsst -k -r ~/LSST/obs/lsst)
+setupRequired(pipe_drivers)
+setupRequired(obs_lsst)
 
 # The following are necessary to run the CI script: bin/runPipeline
 setupRequired(meas_extensions_psfex)
