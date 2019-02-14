@@ -63,7 +63,7 @@ for camera in $cameras; do
 
     case $camera in
 	auxTel)
-	    biasIds="seqNum=28..36"
+	    biasIds="visit=2018092000028..2018092000036"
 	    configs="isr.overscanNumLeadingColumnsToSkip=20 isr.doDark=False"
 	    ;;
 	imsim)
