@@ -63,13 +63,13 @@ for camera in $cameras; do
 
     case $camera in
 	latiss)
-	    biasIds="visit=2018092000028..2018092000036"
-	    configs="isr.overscanNumLeadingColumnsToSkip=20 isr.doDark=False"
+	    biasIds="expId=3018092000028..3018092000036"
+	    configs="isr.overscanNumLeadingColumnsToSkip=20 isr.doDark=False isr.doDefect=False"
 	    ;;
 	imsim)
-	    biasIds="visit=3010000..3010009:3"
-	    darkIds="visit=4010000..4010009:3"
-	    flatIds="visit=5000000..5000009:3"
+	    biasIds="expId=3010000..3010009:3"
+	    darkIds="expId=4010000..4010009:3"
+	    flatIds="expId=5000000..5000009:3"
 	    ;;
 	phosim|ts3)
 	    echo "\"$camera\" does not have calibration data available; skipping" >&2

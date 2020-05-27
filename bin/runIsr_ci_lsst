@@ -67,28 +67,28 @@ for camera in $cameras; do
 	    else
 		ids="seqNum=37^38..69:4^70"
 	    fi
-	    configs="isr.overscanNumLeadingColumnsToSkip=20 isr.doDark=False isr.doFlat=False"
+	    configs="isr.overscanNumLeadingColumnsToSkip=20 isr.doDark=False isr.doFlat=False isr.doDefect=False"
 	    ;;
 	imsim)
 	    if [ X"$_ids" != X ]; then
 		ids=$_ids
 	    else
-		ids="visit=204595"
+		ids="expId=204595"
 	    fi
 	    ;;
 	phosim)
 	    if [ X"$_ids" != X ]; then
 		ids=$_ids
 	    else
-		ids="visit=204595"
+		ids="expId=204595"
 	    fi
 	    configs="isr.doBias=False isr.doDark=False isr.doFlat=False"
 	    ;;
-  ts3)
+        ts3)
 	    if [ X"$_ids" != X ]; then
 		ids=$_ids
 	    else
-		ids="visit=201607220607067"
+		ids="expId=201607220607067"
 	    fi
 	    configs="isr.overscanNumLeadingColumnsToSkip=20 isr.doBias=False isr.doDark=False isr.doFlat=False"
 	    ;;
@@ -96,7 +96,7 @@ for camera in $cameras; do
 	    if [ X"$_ids" != X ]; then
 		ids=$_ids
 	    else
-		ids="visit=201807241028453"
+		ids="expId=201807241028453"
 	    fi
 	    configs="isr.overscanNumLeadingColumnsToSkip=20 isr.doDark=False isr.doFlat=False"
 	    ;;
